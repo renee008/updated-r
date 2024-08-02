@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #218838;
+            border-radius: 4px;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: #28a745;
+        }
+
+        .navbar .dropdown-item {
+            color: #fff;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: #218838;
+        }
+
+        .product-details-head {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .product-details {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #fff;
+            padding: 20px;
+        }
+
+        .btn-primary {
+            background-color: #17a2b8;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #138496;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.875rem;
+            color: #6c757d;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="dashboard.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="student details.html">Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="transfer.html">Transfer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="parental control.html">Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="e-statement.html">Statement</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="about.html">About Us</a>
+                    <a class="dropdown-item" href="financialEducation.html">Education</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="intro.html">LogOut</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Product Details Head -->
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center">Welcome to the transfer page!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h5>Default amount to transfer:</h5>
+                <br>
+                <p class="btn btn-primary" onclick="optionAndTransfer(10)"> $10 </p>
+                <p class="btn btn-primary" onclick="optionAndTransfer(20)"> $20 </p>
+                <p class="btn btn-primary" onclick="optionAndTransfer(40)"> $40 </p>
+                <p class="btn btn-primary" onclick="optionAndTransfer(80)"> $80 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <input class="form-control mb-3" placeholder="Enter your own amount">
+                <p class="btn btn-primary" onclick="window.location.href='dashboard.html'">Enter</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var currentBalance = 5000;
+        
+        function optionAndTransfer(amount) {
+            var newBalance = currentBalance - amount;
+        
+            alert("Transfer initiated for $" + amount);
+        
+            window.location.href = "dashboard.html?balance=" + newBalance;
+        
+            currentBalance = newBalance;
+        }
+    </script>
+
+    <div class="footer">
+        <p>&copy; 2024 Your Bank. All rights reserved.</p>
+    </div>
+</body>
+</html>

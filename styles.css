@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+.product-details { /* Limit width of the details */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left */
+}
+.product-details-head { /* Limit width of the details */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left; /* Align text to the left */
+}
+.product-details img {
+    max-width: 50%; /* Ensure images don't overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ghostwhite;
+}
+
+div.intro {
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+}
+
+div.student-details {
+    margin: auto;
+    max-width: 600px; /* Limit width of the details */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+}
+
+.details-container img {
+    max-width: 100%; /* Ensure images don't overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and details */
+    border: 1px solid black;
+}
+
+.details {
+    flex: 1; /* Take up remaining space */
+}
+
+b {
+    float: right;
+}
+
+button {
+    float: right;
+    color: blue;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
